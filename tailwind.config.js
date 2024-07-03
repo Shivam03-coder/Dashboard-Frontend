@@ -59,6 +59,14 @@ export default withMT({
             display: "block",
           },
         },
+        ".ShowdonMobileonly": {
+          display: "block",
+        },
+        "@screen md": {
+          ".ShowdonMobileonly": {
+            display: "none",
+          },
+        },
       };
 
       addUtilities(newUtilities, ["responsive"]);

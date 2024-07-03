@@ -13,7 +13,11 @@ const Layout = () => {
         IssidebarOpen={IssidebarOpen}
         setIssidebarOpen={setIssidebarOpen}
       />
-      <Nav IssidebarOpen={IssidebarOpen} setIssidebarOpen={setIssidebarOpen} />
+      <Nav
+        IsMobileView={IsMobileView}
+        IssidebarOpen={IssidebarOpen}
+        setIssidebarOpen={setIssidebarOpen}
+      />
     </div>
   );
 };
