@@ -1,26 +1,33 @@
-import React from "react";
-import {
-  Navbar,
-  Collapse,
-  Typography,
-  Button,
-  IconButton,
-  Input,
-} from "@material-tailwind/react";
-
+import React, { useState } from "react";
+import { IconButton } from "@material-tailwind/react";
+import { DiAptana } from "react-icons/di";
 import { FiAlignCenter } from "react-icons/fi";
-import ProfileMenu from "./Profilemenu/ProfileMenu";
+import ProfileMenu from "./Profile/ProfileMenu";
 import Searchbar from "../../shared/Searchbar/Searchbar";
 
-export function Nav() {
+export function Nav({ IssidebarOpen, setIssidebarOpen }) {
+  function handleOnsidebar() {
+    setIssidebarOpen(!IssidebarOpen);
+  }
   return (
-    <nav className="p-2">
-      {/* SERACHING BAR */}
+    <nav className="p-2 h-max top-0 flex justify-between flex-1 flex-grow">
       <section className="px-3 flex items-center gap-4">
-        <IconButton className="bg-transparent" size="md">
+        <IconButton onClick={handleOnsidebar} className="bg-transparent" size="md">
           <FiAlignCenter className="size-8" />
         </IconButton>
-        <Searchbar />
+        <div className="searchbar hidden md:block">
+          <Searchbar />
+        </div>
+      </section>
+      <section className="Row-center gap-x-8">
+        <IconButton
+          
+          className="bg-transparent shadow-none"
+          size="md"
+        >
+          <DiAptana className="size-6" />
+        </IconButton>
+        <ProfileMenu />
       </section>
     </nav>
   );

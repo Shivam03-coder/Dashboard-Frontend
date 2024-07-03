@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  @apply bg-primary;
+  /* @apply bg-primary-950; */
   @apply text-customeYellow;
   @apply font-Roboto
 }

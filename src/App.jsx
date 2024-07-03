@@ -5,7 +5,7 @@ import "./App.css"
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="App bg-primary-950">
       <BrowserRouter>
         <Approutes />
       </BrowserRouter>
