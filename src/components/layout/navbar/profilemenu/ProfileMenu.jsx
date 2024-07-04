@@ -20,14 +20,13 @@ function ProfileMenu() {
       <MenuHandler>
         <Button
           variant="text"
-          color="blue-gray"
           className="flex items-center gap-1 rounded-full py-0.5 pr-2 pl-0.5 lg:ml-auto"
         >
           <Avatar
             variant="circular"
             size="md"
             alt="tania andrew"
-            className="border p-0.5"
+            className=" p-0.5 border-2 border-customeYellow"
             src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
           />
         </Button>
@@ -46,7 +45,7 @@ function ProfileMenu() {
               }`}
             >
               {React.createElement(icon, {
-                className: `h-4 w-4 ${isLastItem ? "text-red-500" : ""}`,
+                className: `size-5  ${isLastItem ? "text-red-500" : ""}`,
                 strokeWidth: 2,
               })}
               <Typography

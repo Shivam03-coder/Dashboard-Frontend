@@ -3,7 +3,7 @@ import { IconButton } from "@material-tailwind/react";
 import { DiAptana } from "react-icons/di";
 import { FiAlignCenter } from "react-icons/fi";
 import { GrCodeSandbox } from "react-icons/gr";
-import ProfileMenu from "./Profile/ProfileMenu";
+import ProfileMenu from "./profilemenu/ProfileMenu";
 import Searchbar from "../../shared/Searchbar/Searchbar";
 
 export function Nav({ IsMobileView, IssidebarOpen, setIssidebarOpen }) {
