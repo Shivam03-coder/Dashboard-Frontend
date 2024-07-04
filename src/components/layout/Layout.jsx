@@ -7,7 +7,7 @@ const Layout = () => {
   const IsMobileView = useMediaquery("720");
   const [IssidebarOpen, setIssidebarOpen] = useState(false);
   return (
-    <div className={`w-full h-full flex`}>
+    <div className="w-full flex justify-between">
       <Sidebar
         IsMobileView={IsMobileView}
         IssidebarOpen={IssidebarOpen}

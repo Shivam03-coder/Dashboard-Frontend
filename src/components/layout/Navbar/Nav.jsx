@@ -11,7 +11,7 @@ export function Nav({ IsMobileView, IssidebarOpen, setIssidebarOpen }) {
     setIssidebarOpen(!IssidebarOpen);
   }
   return (
-    <nav className="p-2 h-max top-0 flex justify-between flex-1 flex-grow">
+    <nav className="p-2 sticky  h-max top-0 flex justify-between flex-1 flex-grow">
       <section className="px-3 flex items-center gap-4">
         {IsMobileView ? (
           <IconButton
@@ -26,8 +26,7 @@ export function Nav({ IsMobileView, IssidebarOpen, setIssidebarOpen }) {
             <GrCodeSandbox className="size-8 " />
           </IconButton>
         )}
-
-        <div className="searchbar">
+        <div className={`${IsMobileView ? "hidden" : "block"}`}>
           <Searchbar />
         </div>
       </section>

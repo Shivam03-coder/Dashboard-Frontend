@@ -3,7 +3,7 @@ import { IoSearchSharp } from "react-icons/io5";
 const Searchbar = () => {
   return (
     <div className=" relative Row-center font-medium text-[1.2rem] text-white">
-      <i className="absolute right-2 !bg-primary-600">
+      <i className="absolute right-5 md:right-2 !bg-primary-600">
         <IoSearchSharp className="size-7 !bg-transparent" />
       </i>
       <input
