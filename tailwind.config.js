@@ -46,7 +46,19 @@ export default withMT({
       Rubik: ["Rubik", "sans-serif"],
     },
 
-    extend: {},
+    extend: {
+      utilities: {
+        ".scrollbar-hidden": {
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+          "&::-webkit-scrollbar": {
+            width: "0px",
+            background:
+              "transparent" ,
+          },
+        },
+      },
+    },
   },
   plugins: [
     function ({ addUtilities }) {
@@ -65,6 +77,15 @@ export default withMT({
         "@screen md": {
           ".ShowdonMobileonly": {
             display: "none",
+          },
+        },
+        ".scrollbar-hidden": {
+          "-ms-overflow-style": "none" ,
+          "scrollbar-width": "none",
+          "&::-webkit-scrollbar": {
+            width: "0px",
+            background:
+              "transparent" /* Optional: just to be sure that we have a background */,
           },
         },
       };

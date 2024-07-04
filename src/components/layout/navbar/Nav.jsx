@@ -23,7 +23,7 @@ export function Nav({ IsMobileView, IssidebarOpen, setIssidebarOpen }) {
           </IconButton>
         ) : (
           <IconButton className="bg-transparent " size="md">
-            <GrCodeSandbox className="size-8 " />
+            <GrCodeSandbox className="size-10 " />
           </IconButton>
         )}
         <div className={`${IsMobileView ? "hidden" : "block"}`}>

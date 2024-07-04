@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  @apply text-customeYellow;
+  @apply font-Roboto;
+}
+body{
+  height: 100vh;
+  overflow: hidden;
+}

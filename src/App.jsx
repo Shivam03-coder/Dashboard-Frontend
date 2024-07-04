@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import Approutes from "./routes/Approutes";
-import "./App.css"
+import "./global.css"
 
 const App = () => {
   return (

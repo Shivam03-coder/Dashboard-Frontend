@@ -1,7 +1,7 @@
 import Searchbar from "../../shared/Searchbar/Searchbar";
-import SidebarLinks from "./sidebarlinks/SidebarLinks";
+import SidebarLinks from "./sidebar-links/SidebarLinks";
 
-const SidebarMenu = ({ IsMobileView }) => {
+const SidebarMenu = () => {
   return (
     <>
       <div className="mb-5 p-3 sticky top-0 z-20  bg-customeYellow text-black">

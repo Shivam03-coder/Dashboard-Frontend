@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Nav from "./Navbar/Nav";
+import Nav from "./navbar/Nav";
 import { Outlet } from "react-router-dom";
 import useMediaquery from "../../hooks/useMediaquery";
 import Sidebar from "./sidebar/Sidebar";
@@ -13,11 +13,14 @@ const Layout = () => {
         IssidebarOpen={IssidebarOpen}
         setIssidebarOpen={setIssidebarOpen}
       />
-      <Nav
-        IsMobileView={IsMobileView}
-        IssidebarOpen={IssidebarOpen}
-        setIssidebarOpen={setIssidebarOpen}
-      />
+      <header className="relative">
+        <Nav
+          IsMobileView={IsMobileView}
+          IssidebarOpen={IssidebarOpen}
+          setIssidebarOpen={setIssidebarOpen}
+        />
+        <Outlet />
+      </header>
     </div>
   );
 };

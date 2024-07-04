@@ -1,6 +1,5 @@
 import { Card, Drawer } from "@material-tailwind/react";
 import SidebarMenu from "./SidebarMenu";
-// import {createPortal} from "react-dom"
 
 function Sidebar({ IsMobileView, IssidebarOpen, setIssidebarOpen }) {
   const closeSidebar = () => setIssidebarOpen(false);
@@ -9,15 +8,15 @@ function Sidebar({ IsMobileView, IssidebarOpen, setIssidebarOpen }) {
       {IsMobileView ? (
         <Drawer  open={IssidebarOpen} onClose={closeSidebar}>
           <Card
-            className="min-h-screen relative min-w-[290px] h-full shadow-xl bg-primary-800 
+            className="min-h-screen  relative min-w-[290px] h-full shadow-xl bg-primary-800 
          text-black rounded-none shadow-blue-gray-900/5"
           >
             <SidebarMenu />
           </Card>
         </Drawer>
       ) : (
-        <Card
-          className="min-h-screen relative min-w-[240px]  shadow-xl bg-primary-800 
+          <Card
+          className="scrollbar-hidden h-screen overflow-y-auto relative min-w-[240px]  shadow-xl bg-primary-800 
                  text-black rounded-none shadow-blue-gray-900/5"
         >
             <SidebarMenu IsMobileView={IsMobileView} />
