@@ -1,10 +1,10 @@
-import { combineReducers } from "@reduxjs/toolkit";
-import userSlice from "./slices/userSlice.js";
-import { apiSlice } from "./middleware/apimiddleware.js";
+import { combineReducers } from '@reduxjs/toolkit';
+import userSlice from './slices/userSlice';
+import { apiService } from './middleware/apimiddleware';
 
 const rootReducer = combineReducers({
-  user: userSlice,
-  [apiSlice.reducer]: apiSlice.reducer,
+  user: userSlice.reducer,
+  [apiService.reducerPath]: apiService.reducer,
 });
 
 export default rootReducer;

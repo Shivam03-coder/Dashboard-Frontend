@@ -24,7 +24,7 @@ const Linksaccordion = ({ Titles, linkitems }) => {
       icon={
         <IoIosArrowDown
           strokeWidth={2.5}
-          className={`mx-auto h-4 w-4 transition-transform ${
+          className={`mx-auto size-6 transition-transform ${
             open === 1 ? "rotate-180" : ""
           }`}
         />
@@ -36,7 +36,7 @@ const Linksaccordion = ({ Titles, linkitems }) => {
           open === 1 ? "bg-black" : ""
         }`}
       >
-        <Typography className="mr-auto font-Varela font-medium text-customeYellow text-[1.2rem]">
+        <Typography className="mr-auto font-Inter font-normal text-customeYellow text-[1.2rem]">
           {Titles}
         </Typography>
       </AccordionHeader>

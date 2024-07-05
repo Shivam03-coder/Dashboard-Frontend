@@ -1,12 +1,12 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: import.meta.env.VITE_API_URL,
 });
 
-export const apiSlice = createApi({
-  reducerPath:"adminApi",
+export const apiService = createApi({
+  reducerPath: 'adminApi',
   baseQuery,
-  tagTypes: ["User"],
-  endpoints: () => ({}),
+  tagTypes: ['User'],
+  endpoints: (builder) => ({}), 
 });
