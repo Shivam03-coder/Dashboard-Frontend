@@ -1,5 +1,6 @@
-import Searchbar from "../../shared/Searchbar/Searchbar";
-import SidebarLinks from "./sidebar-links/SidebarLinks";
+import { Avatar, Typography } from "@material-tailwind/react";
+import Searchbar from "../../../shared/Searchbar/Searchbar";
+import SidebarLinks from "./SidebarLinks";
 
 const SidebarMenu = () => {
   return (

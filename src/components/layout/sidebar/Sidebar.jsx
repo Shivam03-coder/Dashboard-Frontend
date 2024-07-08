@@ -1,5 +1,5 @@
 import { Card, Drawer } from "@material-tailwind/react";
-import SidebarMenu from "./SidebarMenu";
+import SidebarMenu from "./sidebarmenu/SidebarMenu";
 
 function Sidebar({ IsMobileView, IssidebarOpen, setIssidebarOpen }) {
   const closeSidebar = () => setIssidebarOpen(false);
