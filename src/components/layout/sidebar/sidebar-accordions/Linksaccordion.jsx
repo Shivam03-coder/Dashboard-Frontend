@@ -36,16 +36,16 @@ const Linksaccordion = ({ Titles, linkitems }) => {
           open === 1 ? "bg-black" : ""
         }`}
       >
-        <Typography className="mr-auto font-Inter font-normal text-customeYellow text-[1.2rem]">
+        <NavLink className="mr-auto font-Inter font-normal text-customeYellow text-[1.2rem]">
           {Titles}
-        </Typography>
+        </NavLink>
       </AccordionHeader>
       <AccordionBody className="py-1">
         <section className="p-0 mt-5 text-customeYellow space-y-3">
-          {linkitems?.map(({ label, icon, id }, index) => {
+          {linkitems?.map(({ label, icon, id, path }, index) => {
             const Componenet = icon;
             return (
-              <NavLink
+              <Typography
                 key={id}
                 onClick={() => setIsactive(id)}
                 className={` transition-all ${
@@ -55,8 +55,10 @@ const Linksaccordion = ({ Titles, linkitems }) => {
                 <i>
                   <Componenet strokeWidth={3} className="size-5" />
                 </i>
-                <Typography className="font-Inter font-medium" >{label}</Typography>
-              </NavLink>
+                <NavLink to={path} className="font-Inter font-medium">
+                  {label}
+                </NavLink>
+              </Typography>
             );
           })}
         </section>

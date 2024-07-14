@@ -11,10 +11,10 @@ const Root = () => {
   const [IssidebarOpen, setIssidebarOpen] = useState(false);
 
   const userId = useSelector(({ user }) => user.userId);
-  console.log("Root ~ userId:", userId);
+  // console.log("Root ~ userId:", userId);
 
   const { data } = useGetUserQuery(userId);
-  console.log("Root ~ data:", data)
+  // console.log("Root ~ data:", data)
 
   return (
     <div className="w-ful h-fulll flex justify-between">
@@ -24,7 +24,7 @@ const Root = () => {
         IssidebarOpen={IssidebarOpen}
         setIssidebarOpen={setIssidebarOpen}
       />
-      <header className="relative">
+      <header className="relative w-full">
         <Nav
           IsMobileView={IsMobileView}
           IssidebarOpen={IssidebarOpen}

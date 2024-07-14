@@ -31,11 +31,48 @@ export default withMT({
         900: "#8F1851",
         950: "#771444",
       },
-      customeOrange: "#fc6736",
-      customeSky: "#78909c",
-      customeDanger: "#d71313",
-      customePink: "#ea1179",
-      customeYellow: "#faa300",
+      customeOrange: {
+        DEFAULT: "#FC6735",
+        50: "#FFEFEA",
+        100: "#FEE0D6",
+        200: "#FEC2AE",
+        300: "#FDA485",
+        400: "#FD855D",
+        500: "#FC6735",
+        600: "#F54004",
+        700: "#BE3203",
+        800: "#872302",
+        900: "#4F1501",
+        950: "#340E01",
+      },
+      customePink: {
+        DEFAULT: "#EA1179",
+        50: "#FAB9D8",
+        100: "#F9A6CD",
+        200: "#F680B8",
+        300: "#F35AA3",
+        400: "#F0348E",
+        500: "#EA1179",
+        600: "#B60D5E",
+        700: "#810943",
+        800: "#4D0628",
+        900: "#19020D",
+        950: "#000000",
+      },
+      customeYellow: {
+        DEFAULT: "#FAA300",
+        50: "#FFE4B3",
+        100: "#FFDD9E",
+        200: "#FFCF75",
+        300: "#FFC14D",
+        400: "#FFB324",
+        500: "#FAA300",
+        600: "#C27E00",
+        700: "#8A5A00",
+        800: "#523500",
+        900: "#1A1100",
+        950: "#000000",
+      },
     },
 
     fontFamily: {
@@ -53,8 +90,7 @@ export default withMT({
           "scrollbar-width": "none",
           "&::-webkit-scrollbar": {
             width: "0px",
-            background:
-              "transparent" ,
+            background: "transparent",
           },
         },
       },
@@ -80,7 +116,7 @@ export default withMT({
           },
         },
         ".scrollbar-hidden": {
-          "-ms-overflow-style": "none" ,
+          "-ms-overflow-style": "none",
           "scrollbar-width": "none",
           "&::-webkit-scrollbar": {
             width: "0px",
@@ -94,9 +130,6 @@ export default withMT({
     },
     function ({ addComponents }) {
       addComponents({
-        ".Doublecol": {
-          "@apply grid lg:grid-cols-2 place-items-center": {},
-        },
         ".Row-center": {
           "@apply flex justify-center items-center": {},
         },

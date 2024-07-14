@@ -5,12 +5,20 @@ export const userApi = apiService.injectEndpoints({
     getUser: builder.query({
       query: (id) => ({
         url: `/user/${id}`,
-        method: "Get",
+        method: "GET",
       }),
-      providesTags: ["Movies"],
+      providesTags: ["Users"],
       transformResponse: (response) => response.data,
+    }),
+    getProducts: builder.query({
+      query: () => ({
+        url: "/client/products",
+        method: "GET",
+      }),
+      transformResponse: (response) => response.data,
+      providesTags: ["Products"],
     }),
   }),
 });
 
-export const { useGetUserQuery } = userApi;
+export const { useGetUserQuery, useGetProductsQuery } = userApi;

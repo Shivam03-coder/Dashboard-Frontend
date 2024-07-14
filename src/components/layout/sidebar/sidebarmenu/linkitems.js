@@ -1,7 +1,7 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { IoPersonAddOutline , IoEarthOutline} from "react-icons/io5";
-import { MdOutlineRemoveRedEye , MdOutlineCalendarToday } from "react-icons/md";
-import { TbPageBreak  , TbCalendarMonth , TbReportMoney} from "react-icons/tb";
+import { IoPersonAddOutline, IoEarthOutline } from "react-icons/io5";
+import { MdOutlineRemoveRedEye, MdOutlineCalendarToday } from "react-icons/md";
+import { TbPageBreak, TbCalendarMonth, TbReportMoney } from "react-icons/tb";
 import { RiAdminLine } from "react-icons/ri";
 import { GrDocumentPerformance } from "react-icons/gr";
 
@@ -10,21 +10,25 @@ const ClientFacinglinksitems = [
     id: 0,
     icon: AiOutlineShoppingCart,
     label: "Products",
+    path: "/products",
   },
   {
     id: 1,
     icon: IoPersonAddOutline,
     label: "Customers",
+    path: "/products",
   },
   {
     id: 2,
     icon: TbReportMoney,
     label: "Transcations",
+    path: "/transcations",
   },
   {
     id: 3,
     icon: IoEarthOutline,
     label: "Geography",
+    path: "/geography",
   },
 ];
 const ManagementsLinks = [
@@ -62,8 +66,4 @@ const Saleslinksitems = [
   },
 ];
 
-
-
-
-
-export { ClientFacinglinksitems , Saleslinksitems , ManagementsLinks};
+export { ClientFacinglinksitems, Saleslinksitems, ManagementsLinks };
