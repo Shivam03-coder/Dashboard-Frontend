@@ -18,7 +18,16 @@ export const userApi = apiService.injectEndpoints({
       transformResponse: (response) => response.data,
       providesTags: ["Products"],
     }),
+    getCustomer: builder.query({
+      query: () => ({
+        url: "/client/customer",
+        method: "GET",
+      }),
+      transformResponse: (response) => response.data,
+      providesTags: ["Products"],
+    }),
   }),
 });
 
-export const { useGetUserQuery, useGetProductsQuery } = userApi;
+export const { useGetUserQuery, useGetProductsQuery, useGetCustomerQuery } =
+  userApi;

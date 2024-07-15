@@ -1,9 +1,6 @@
 import React from "react";
-import { useGetProductsQuery } from "../../app/api/userapi";
 
 const Dashboard = () => {
-  const { data } = useGetProductsQuery();
-  console.log("🚀 ~ Dashboard ~ data:", data)
 
   return (
     <div>

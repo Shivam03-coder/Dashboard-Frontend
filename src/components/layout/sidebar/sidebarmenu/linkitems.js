@@ -16,7 +16,7 @@ const ClientFacinglinksitems = [
     id: 1,
     icon: IoPersonAddOutline,
     label: "Customers",
-    path: "/products",
+    path: "/customer",
   },
   {
     id: 2,
