@@ -9,11 +9,11 @@ export const paginationSlice = createSlice({
   name: "pagination",
   initialState,
   reducers: {
-    incrementPage: (state, action) => {
-      state.currentPage = state.currentPage + action.payload;
+    incrementPage: (state) => {
+      state.currentPage = state.currentPage + 1;
     },
-    decrementPage: (state, action) => {
-      state.currentPage = state.currentPage - action.payload;
+    decrementPage: (state) => {
+      state.currentPage = state.currentPage - 1;
     },
     setItemsperPage: (state, action) => {
       state.itemsPerpage = action.payload;
@@ -21,4 +21,5 @@ export const paginationSlice = createSlice({
   },
 });
 
-export const { setItemsperPage, incrementPage, decrementPage} = paginationSlice.actions;
+export const { setItemsperPage, incrementPage, decrementPage } =
+  paginationSlice.actions;

@@ -7,7 +7,6 @@ import usePagination from "../../hooks/usePagination";
 
 const Customerpage = () => {
   const { data, isLoading, isError } = useGetCustomerQuery();
-  console.log("🚀 ~ Customerpage ~ data:", data);
 
   const { currentPage, itemsPerpage } = useSelector(
     (state) => state.pagination
@@ -20,10 +19,10 @@ const Customerpage = () => {
   }
 
   const Data = usePagination(currentPage, itemsPerpage, data);
-  console.log("🚀 ~ usePagination ~ Data:", Data)
+  
 
   return (
-    <section className="scrollbar-hidden p-7 h-screen overflow-auto">
+    <section className="scrollbar-hidden md:p-7 h-screen overflow-auto">
       <Pageheader title="CUSTOMERS" subtitle="See your list of customer" />
       <section className="pb-20">
         <Customertable Data={Data} Toatlpages={Toatlpages} />

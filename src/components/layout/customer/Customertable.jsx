@@ -10,44 +10,38 @@ import {
   IconButton,
   Tooltip,
 } from "@material-tailwind/react";
-import { TABLE_ROWS, TABLE_HEAD } from "./Tabledata";
+import { TABLE_HEAD } from "./Tabledata";
 import { useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   incrementPage,
   decrementPage,
 } from "../../../app/slices/paginationSlice";
 
 function Customertable({ Data, Toatlpages }) {
-  console.log("🚀 ~ Customertable ~ Data:", Data);
-
   const [Pagenumber, setPagenumber] = useState(1);
-  const [Lastbtn, setLastbtn] = useState(false);
+  const [Lastbtn, setLastbtn] = useState(true);
   const [Nextbtn, setNextbtn] = useState(false);
   const dispatch = useDispatch();
 
-  const handleincrementPageChange = () => {
-    setPagenumber(Pagenumber + 1);
-    dispatch(incrementPage(Pagenumber));
-  };
+  const handleIncrementPageChange = useCallback(() => {
+    setPagenumber((prevPageNumber) => prevPageNumber + 1);
+    dispatch(incrementPage());
+  }, [dispatch]);
 
-  const handledecrementPageChange = () => {
-    setPagenumber(Pagenumber - 1);
-    dispatch(decrementPage(Pagenumber));
-  };
+  const handleDecrementPageChange = useCallback(() => {
+    setPagenumber((prevPageNumber) => prevPageNumber - 1);
+    dispatch(decrementPage());
+  }, [dispatch]);
 
   useEffect(() => {
-    if (Pagenumber >= Toatlpages) {
-      setNextbtn(true);
-    }
-    if (Pagenumber == 0) {
-      setLastbtn(true);
-    }
-  }, [Pagenumber]);
+    setNextbtn(Pagenumber >= Toatlpages);
+    setLastbtn(Pagenumber <= 1);
+  }, [Pagenumber, Toatlpages]);
 
   return (
-    <Card className="h-full  rounded-none bg-primary-600 text-customeYellow-500  shadow-2xl">
-      <CardBody className=" scrollbar-hidden px-0 py-0 ">
+    <Card className="h-full    rounded-xl bg-primary-600 text-customeYellow-500  shadow-2xl">
+      <CardBody className=" overflow-x-auto px-0 py-0 ">
         <table className="w-full min-w-max table-auto text-left">
           <thead>
             <tr>
@@ -64,21 +58,12 @@ function Customertable({ Data, Toatlpages }) {
             </tr>
           </thead>
           <tbody>
-            {TABLE_ROWS.map(
+            {Data?.map(
               (
-                {
-                  img,
-                  name,
-                  amount,
-                  date,
-                  status,
-                  account,
-                  accountNumber,
-                  expiry,
-                },
+                { name, email, phoneNumber, country, occupation, role },
                 index
               ) => {
-                const isLast = index === TABLE_ROWS.length - 1;
+                const isLast = index === Data.length - 1;
                 const classes = isLast
                   ? "p-4"
                   : "p-4 border-b border-blue-gray-50";
@@ -94,54 +79,28 @@ function Customertable({ Data, Toatlpages }) {
                     </td>
                     <td className={classes}>
                       <Typography variant="small" className="font-normal">
-                        {amount}
+                        {email}
                       </Typography>
                     </td>
                     <td className={classes}>
                       <Typography variant="small" className="font-normal">
-                        {date}
+                        {phoneNumber}
                       </Typography>
                     </td>
                     <td className={classes}>
-                      <div className="w-max">
-                        <Chip
-                          size="sm"
-                          variant="ghost"
-                          value={status}
-                          color={
-                            status === "paid"
-                              ? "green"
-                              : status === "pending"
-                              ? "amber"
-                              : "red"
-                          }
-                        />
-                      </div>
+                      <Typography variant="small" className="font-normal">
+                        {country}
+                      </Typography>
                     </td>
                     <td className={classes}>
-                      <div className="flex items-center gap-3">
-                        <div className="flex flex-col">
-                          <Typography
-                            variant="small"
-                            className="font-normal capitalize"
-                          >
-                            {account.split("-").join(" ")} {accountNumber}
-                          </Typography>
-                          <Typography
-                            variant="small"
-                            className="font-normal opacity-70"
-                          >
-                            {expiry}
-                          </Typography>
-                        </div>
-                      </div>
+                      <Typography variant="small" className="font-normal">
+                        {occupation}
+                      </Typography>
                     </td>
                     <td className={classes}>
-                      <Tooltip content="Edit User">
-                        <IconButton variant="text">
-                          <TbPageBreak className="h-4 w-4" />
-                        </IconButton>
-                      </Tooltip>
+                      <Typography variant="small" className="font-normal">
+                        {role}
+                      </Typography>
                     </td>
                   </tr>
                 );
@@ -152,7 +111,7 @@ function Customertable({ Data, Toatlpages }) {
       </CardBody>
       <CardFooter className="flex items-center justify-between border-t  p-4">
         <Button
-          onClick={handledecrementPageChange}
+          onClick={handleDecrementPageChange}
           className="bg-pink-400"
           variant="filled"
           size="sm"
@@ -160,35 +119,8 @@ function Customertable({ Data, Toatlpages }) {
         >
           Previous
         </Button>
-        <div className="flex items-center gap-2">
-          <IconButton
-            className="border-customePink-400"
-            variant="outlined"
-            size="sm"
-          >
-            1
-          </IconButton>
-          <IconButton variant="text" size="md">
-            2
-          </IconButton>
-          <IconButton variant="text" size="md">
-            3
-          </IconButton>
-          <IconButton variant="text" size="md">
-            ...
-          </IconButton>
-          <IconButton variant="text" size="md">
-            8
-          </IconButton>
-          <IconButton variant="text" size="md">
-            9
-          </IconButton>
-          <IconButton variant="text" size="md">
-            10
-          </IconButton>
-        </div>
         <Button
-          onClick={handleincrementPageChange}
+          onClick={handleIncrementPageChange}
           className="bg-pink-400"
           variant="filled"
           size="sm"
