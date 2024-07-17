@@ -2,17 +2,14 @@ import { ResponsiveChoropleth } from "@nivo/geo";
 import mapdata from "./data/data";
 
 const Geographymap = ({ data }) => {
-
   return (
     <ResponsiveChoropleth
       data={data}
-      key={data}
       features={mapdata.features}
       margin={{ top: 0, right: 0, bottom: 200, left: 0 }}
       colors="greys"
       domain={[0, 1000000]}
       unknownColor="#39447e"
-      label="properties.name"
       valueFormat=".2s"
       projectionTranslation={[0.5, 0.5]}
       projectionRotation={[0, 0, 0]}
@@ -38,8 +35,7 @@ const Geographymap = ({ data }) => {
               on: "hover",
               style: {
                 itemTextColor: "#F680B8",
-                  itemOpacity: 1,
-                  itemOpacity: 0,
+                itemOpacity: 1,
               },
             },
           ],

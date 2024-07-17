@@ -48,21 +48,25 @@ const Saleslinksitems = [
     id: 0,
     icon: MdOutlineRemoveRedEye,
     label: "Overview",
+    path: "/overview",
   },
   {
     id: 1,
     icon: MdOutlineCalendarToday,
     label: "Daily",
+    path: "/daily",
   },
   {
     id: 2,
     icon: TbCalendarMonth,
     label: "Monthly",
+    path: "/monthly",
   },
   {
     id: 3,
     icon: TbPageBreak,
     label: "Breakdown",
+    path: "/breakdown",
   },
 ];
 
