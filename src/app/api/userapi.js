@@ -24,10 +24,32 @@ export const userApi = apiService.injectEndpoints({
         method: "GET",
       }),
       transformResponse: (response) => response.data,
-      providesTags: ["Products"],
+      providesTags: ["Customers"],
+    }),
+    getTransactions: builder.query({
+      query: ({ page, pageSize, search }) => ({
+        url: "/client/transcations",
+        method: "GET",
+        params: { page, pageSize, search },
+      }),
+      transformResponse: (response) => response.data,
+      providesTags: ["Transcations"],
+    }),
+    getGeography: builder.query({
+      query: () => ({
+        url: "/client/geography",
+        method: "GET",
+      }),
+      transformResponse: (response) => response.data,
+      providesTags: ["Users"],
     }),
   }),
 });
 
-export const { useGetUserQuery, useGetProductsQuery, useGetCustomerQuery } =
-  userApi;
+export const {
+  useGetUserQuery,
+  useGetProductsQuery,
+  useGetCustomerQuery,
+  useGetTransactionsQuery,
+  useGetGeographyQuery,
+} = userApi;
