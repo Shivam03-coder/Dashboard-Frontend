@@ -1,7 +1,7 @@
 import React from "react";
 import Pageheader from "../shared/header/Pageheader";
 import { useGetCustomerQuery } from "../../app/api/userapi";
-import Customertable from "../layout/customer/Customertable";
+import Customertable from "../pages-components/customer/Customertable";
 import { useSelector } from "react-redux";
 import usePagination from "../../hooks/usePagination";
 
@@ -19,7 +19,6 @@ const Customerpage = () => {
   }
 
   const Data = usePagination(currentPage, itemsPerpage, data);
-  
 
   return (
     <section className="scrollbar-hidden md:p-7 h-screen overflow-auto">

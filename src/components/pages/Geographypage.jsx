@@ -1,7 +1,7 @@
 import React from "react";
 import { useGetGeographyQuery } from "../../app/api/userapi";
 import Pageheader from "../shared/header/Pageheader";
-import Geographymap from "../layout/geography/Geographymap";
+import Geographymap from "../pages-components/geography/Geographymap";
 
 const Geographypage = () => {
   const { data } = useGetGeographyQuery();

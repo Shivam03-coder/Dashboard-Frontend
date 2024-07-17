@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Pageheader from "../shared/header/Pageheader";
 import { useGetTransactionsQuery } from "../../app/api/userapi";
-import Transcationtable from "../layout/transactions/Transcationtable";
+import Transcationtable from "../pages-components/transactions/Transcationtable";
 
 const Transcationspage = () => {
   const [page, setPage] = useState(1);

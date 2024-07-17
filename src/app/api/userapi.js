@@ -43,6 +43,14 @@ export const userApi = apiService.injectEndpoints({
       transformResponse: (response) => response.data,
       providesTags: ["Users"],
     }),
+    getSalesOverview: builder.query({
+      query: () => ({
+        url: "/sales/overview",
+        method: "GET",
+      }),
+      transformResponse: (response) => response.data,
+      providesTags: ["Users"],
+    }),
   }),
 });
 
@@ -52,4 +60,5 @@ export const {
   useGetCustomerQuery,
   useGetTransactionsQuery,
   useGetGeographyQuery,
+  useGetSalesOverviewQuery,
 } = userApi;

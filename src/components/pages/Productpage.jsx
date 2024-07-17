@@ -1,5 +1,5 @@
 import React from "react";
-import Products from "../layout/products/Products";
+import Products from "../pages-components/products/Products";
 import Pageheader from "../shared/header/Pageheader";
 
 const Productpage = () => {
