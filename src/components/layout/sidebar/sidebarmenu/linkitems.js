@@ -24,12 +24,6 @@ const ClientFacinglinksitems = [
     label: "Transcations",
     path: "/transcations",
   },
-  {
-    id: 3,
-    icon: IoEarthOutline,
-    label: "Geography",
-    path: "/geography",
-  },
 ];
 const ManagementsLinks = [
   {

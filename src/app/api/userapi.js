@@ -35,14 +35,6 @@ export const userApi = apiService.injectEndpoints({
       transformResponse: (response) => response.data,
       providesTags: ["Transcations"],
     }),
-    getGeography: builder.query({
-      query: () => ({
-        url: "/client/geography",
-        method: "GET",
-      }),
-      transformResponse: (response) => response.data,
-      providesTags: ["Users"],
-    }),
     getSalesOverview: builder.query({
       query: () => ({
         url: "/sales/overview",
@@ -59,6 +51,5 @@ export const {
   useGetProductsQuery,
   useGetCustomerQuery,
   useGetTransactionsQuery,
-  useGetGeographyQuery,
   useGetSalesOverviewQuery,
 } = userApi;

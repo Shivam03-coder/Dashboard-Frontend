@@ -5,7 +5,6 @@ import Dashboard from "../components/pages/Dashboard";
 import Productpage from "../components/pages/Productpage";
 import Customerpage from "../components/pages/Customerpage";
 import Transcationspage from "../components/pages/Transcationspage";
-import Geographypage from "../components/pages/Geographypage";
 import OverviewPage from "../components/pages/OverviewPage";
 
 const Approutes = () => {
@@ -17,7 +16,6 @@ const Approutes = () => {
         <Route path="/products" element={<Productpage />} />
         <Route path="/customer" element={<Customerpage />} />
         <Route path="/transcations" element={<Transcationspage />} />
-        <Route path="/geography" element={<Geographypage />} />
         <Route path="/overview" element={<OverviewPage />} />
         <Route />
       </Route>
