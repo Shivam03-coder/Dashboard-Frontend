@@ -40,7 +40,7 @@ export const userApi = apiService.injectEndpoints({
         url: "/sales/overview",
         method: "GET",
       }),
-      transformResponse: (response) => response.data,
+      transformResponse: (response) => response.data?.overAllstats,
       providesTags: ["Users"],
     }),
   }),
