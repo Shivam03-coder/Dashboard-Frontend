@@ -15,16 +15,11 @@ const Breakdownpage = () => {
     );
   }
 
-  const newData = useMemo(() => {
-    if (data && data.length > 0) {
-      const sales = data[0].salesByCategory;
-      return Object.keys(sales).map((key) => ({
-        type: key,
-        value: sales[key],
-      }));
-    }
-    return [];
-  }, [data]);
+  const sales = data[0].salesByCategory;
+  const newData = Object.keys(sales).map((key) => ({
+    type: key,
+    value: sales[key],
+  }));
 
   return (
     <section className="scrollbar-hidden p-7 h-screen overflow-y-auto">

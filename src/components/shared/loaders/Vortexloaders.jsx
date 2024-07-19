@@ -2,7 +2,7 @@ import { Vortex } from "react-loader-spinner";
 
 const Vortexloaders = () => {
   return (
-    <div className="h-full w-full Row-center">
+    <div className="h-screen w-full Row-center">
       <Vortex
         visible={true}
         height="130"
