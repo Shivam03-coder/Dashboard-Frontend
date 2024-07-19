@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import { IconButton } from "@material-tailwind/react";
-import { DiAptana } from "react-icons/di";
+import { IconButton, Typography } from "@material-tailwind/react";
 import { FiAlignCenter } from "react-icons/fi";
 import { GrCodeSandbox } from "react-icons/gr";
-import ProfileMenu from "./profilemenu/ProfileMenu";
-import Searchbar from "../../shared/Searchbar/Searchbar";
 
 export function Nav({ IsMobileView, IssidebarOpen, setIssidebarOpen }) {
   function handleOnsidebar() {
@@ -27,14 +23,8 @@ export function Nav({ IsMobileView, IssidebarOpen, setIssidebarOpen }) {
           </IconButton>
         )}
         <div className={`${IsMobileView ? "hidden" : "block"}`}>
-          <Searchbar />
+          <Typography variant="h3" >FINNANCE TRACKER</Typography>
         </div>
-      </section>
-      <section className="Row-center gap-x-8">
-        <IconButton className="bg-transparent shadow-none" size="md">
-          <DiAptana className="size-6" />
-        </IconButton>
-        <ProfileMenu />
       </section>
     </nav>
   );

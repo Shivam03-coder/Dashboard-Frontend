@@ -32,12 +32,6 @@ const ManagementsLinks = [
     label: "Admin",
     path: "/admin",
   },
-  {
-    id: 1,
-    icon: GrDocumentPerformance,
-    label: "Performance",
-    path: "/overview",
-  },
 ];
 const Saleslinksitems = [
   {

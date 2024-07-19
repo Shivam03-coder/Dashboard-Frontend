@@ -1,4 +1,4 @@
-import Searchbar from "../../../shared/Searchbar/Searchbar";
+import { Typography } from "@material-tailwind/react";
 import SidebarLinks from "./SidebarLinks";
 import {NavLink} from "react-router-dom"
 
@@ -11,7 +11,7 @@ const SidebarMenu = () => {
         </NavLink>
       </div>
       <div className="md:hidden block">
-        <Searchbar />
+      <Typography variant="h3" className="text-center" >FINNANCE <br /> TRACKER</Typography>
       </div>
       <div className="navigations px-5 space-y-7 mt-6 text-customeYellow">
         <SidebarLinks />

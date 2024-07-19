@@ -15,7 +15,7 @@ const Approutes = () => {
     <Routes>
       <Route element={<Root />}>
         <Route path="/" element={<Navigate to={"/dashboard"} />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" index element={<Dashboard />} />
         <Route path="/products" element={<Productpage />} />
         <Route path="/customer" element={<Customerpage />} />
         <Route path="/transcations" element={<Transcationspage />} />
