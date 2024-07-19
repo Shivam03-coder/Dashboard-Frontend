@@ -7,6 +7,8 @@ import Customerpage from "../components/pages/Customerpage";
 import Transcationspage from "../components/pages/Transcationspage";
 import OverviewPage from "../components/pages/OverviewPage";
 import Breakdownpage from "../components/pages/Breakdownpage";
+import Adminpage from "../components/pages/Adminpage";
+
 
 const Approutes = () => {
   return (
@@ -19,6 +21,7 @@ const Approutes = () => {
         <Route path="/transcations" element={<Transcationspage />} />
         <Route path="/overview" element={<OverviewPage />} />
         <Route path="/breakdown" element={<Breakdownpage />} />
+        <Route path="/admin" element={<Adminpage />} />
         <Route />
       </Route>
     </Routes>

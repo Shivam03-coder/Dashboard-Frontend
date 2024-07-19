@@ -43,6 +43,14 @@ export const userApi = apiService.injectEndpoints({
       transformResponse: (response) => response.data?.overAllstats,
       providesTags: ["Users"],
     }),
+    getAdmins: builder.query({
+      query: () => ({
+        url: "/appadmins/admins",
+        method: "GET",
+      }),
+      transformResponse: (response) => response.data,
+      providesTags: ["Users"],
+    }),
   }),
 });
 
@@ -52,4 +60,5 @@ export const {
   useGetCustomerQuery,
   useGetTransactionsQuery,
   useGetSalesOverviewQuery,
+  useGetAdminsQuery,
 } = userApi;

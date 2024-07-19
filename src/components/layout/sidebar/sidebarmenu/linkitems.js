@@ -29,12 +29,14 @@ const ManagementsLinks = [
   {
     id: 0,
     icon: RiAdminLine,
-    label: "Overview",
+    label: "Admin",
+    path: "/admin",
   },
   {
     id: 1,
     icon: GrDocumentPerformance,
     label: "Performance",
+    path: "/overview",
   },
 ];
 const Saleslinksitems = [
