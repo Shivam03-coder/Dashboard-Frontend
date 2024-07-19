@@ -2,12 +2,19 @@ import React from "react";
 import Pageheader from "../shared/header/Pageheader";
 import OverviewCharts from "../pages-components/overview/OverviewCharts";
 import { useGetSalesOverviewQuery } from "../../app/api/userapi";
+import Vortexloaders from "../shared/loaders/Vortexloaders";
 
 const OverviewPage = () => {
-  const { data } = useGetSalesOverviewQuery();
-  if (!data) {
-    return <h1>LOADING............</h1>;
+  const { data ,isLoading } = useGetSalesOverviewQuery();
+
+  if (isLoading) {
+    return (
+      <>
+        <Vortexloaders />
+      </>
+    );
   }
+
   const ChartData = data[0].monthlyData;
   return (
     <section className="scrollbar-hidden p-7 h-screen overflow-y-auto">

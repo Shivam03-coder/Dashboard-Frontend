@@ -2,17 +2,26 @@ import React, { useState } from "react";
 import Pageheader from "../shared/header/Pageheader";
 import { useGetTransactionsQuery } from "../../app/api/userapi";
 import Transcationtable from "../pages-components/transactions/Transcationtable";
+import Vortexloaders from "../shared/loaders/Vortexloaders";
 
 const Transcationspage = () => {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(20);
   const [search, setSearch] = useState("");
 
-  const { data } = useGetTransactionsQuery({
+  const { data, isLoading } = useGetTransactionsQuery({
     page,
     pageSize,
     search,
   });
+
+  if (isLoading) {
+    return (
+      <>
+        <Vortexloaders />
+      </>
+    );
+  }
 
   return (
     <div>

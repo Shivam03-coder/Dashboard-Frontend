@@ -6,19 +6,17 @@ import Productpage from "../components/pages/Productpage";
 import Customerpage from "../components/pages/Customerpage";
 import Transcationspage from "../components/pages/Transcationspage";
 import OverviewPage from "../components/pages/OverviewPage";
-import Dailypage from "../components/pages/Dailypage";
 
 const Approutes = () => {
   return (
     <Routes>
-      <Route element={<Root/>}>
-        <Route path="/" element={<Navigate to={"/dashboard"}  />} />
+      <Route element={<Root />}>
+        <Route path="/" element={<Navigate to={"/dashboard"} />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/products" element={<Productpage />} />
         <Route path="/customer" element={<Customerpage />} />
         <Route path="/transcations" element={<Transcationspage />} />
         <Route path="/overview" element={<OverviewPage />} />
-        <Route path="/daily" element={<Dailypage />} />
         <Route />
       </Route>
     </Routes>

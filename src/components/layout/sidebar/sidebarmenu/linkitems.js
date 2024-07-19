@@ -45,18 +45,6 @@ const Saleslinksitems = [
     path: "/overview",
   },
   {
-    id: 1,
-    icon: MdOutlineCalendarToday,
-    label: "Daily",
-    path: "/daily",
-  },
-  {
-    id: 2,
-    icon: TbCalendarMonth,
-    label: "Monthly",
-    path: "/monthly",
-  },
-  {
     id: 3,
     icon: TbPageBreak,
     label: "Breakdown",

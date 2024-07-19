@@ -4,6 +4,7 @@ import { useGetCustomerQuery } from "../../app/api/userapi";
 import Customertable from "../pages-components/customer/Customertable";
 import { useSelector } from "react-redux";
 import usePagination from "../../hooks/usePagination";
+import Vortexloaders from "../shared/loaders/Vortexloaders";
 
 const Customerpage = () => {
   const { data, isLoading, isError } = useGetCustomerQuery();
@@ -14,8 +15,12 @@ const Customerpage = () => {
 
   const Toatlpages = Math.ceil(data?.length / itemsPerpage);
 
-  if (isError) {
-    return <h1>NULL</h1>;
+  if (isLoading) {
+    return (
+      <>
+        <Vortexloaders />
+      </>
+    );
   }
 
   const Data = usePagination(currentPage, itemsPerpage, data);
