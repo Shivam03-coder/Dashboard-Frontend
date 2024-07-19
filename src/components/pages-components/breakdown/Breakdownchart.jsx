@@ -26,7 +26,7 @@ const Breakdownchart = ({ data }) => {
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
-        <Tooltip />
+        <Tooltip contentStyle={{ backgroundColor: 'black',borderRadius:"8px", boxShadow:"revert" }} />
         <Legend />
       </PieChart>
     </ResponsiveContainer>

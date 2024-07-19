@@ -15,19 +15,20 @@ const Breakdownpage = () => {
     );
   }
 
-  
   const newData = useMemo(() => {
-    const sales = data[0].salesByCategory;
-    return Object.keys(sales).map((key) => ({
-      type: key,
-      value: sales[key],
-    }));
+    if (data && data.length > 0) {
+      const sales = data[0].salesByCategory;
+      return Object.keys(sales).map((key) => ({
+        type: key,
+        value: sales[key],
+      }));
+    }
+    return [];
   }, [data]);
-  console.log(newData);
 
   return (
     <section className="scrollbar-hidden p-7 h-screen overflow-y-auto">
-      <Pageheader title="OVERVIEW" subtitle="See Overview of Data" />
+      <Pageheader title="BREAKDOWN" subtitle="See breakdown of sales" />
       <section className="pb-20">
         <Breakdownchart data={newData} />
       </section>
