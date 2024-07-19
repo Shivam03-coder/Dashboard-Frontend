@@ -7,7 +7,6 @@ import Transcationspage from "../components/pages/Transcationspage";
 import OverviewPage from "../components/pages/OverviewPage";
 import Breakdownpage from "../components/pages/Breakdownpage";
 import Adminpage from "../components/pages/Adminpage";
-import Balltrinagle from "../components/shared/loaders/Balltrinagle";
 
 const Approutes = () => {
   return (
