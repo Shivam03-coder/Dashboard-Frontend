@@ -1,6 +1,5 @@
 import { Typography } from "@material-tailwind/react";
 import SidebarLinks from "./SidebarLinks";
-import { NavLink } from "react-router-dom";
 
 const SidebarMenu = () => {
   return (
