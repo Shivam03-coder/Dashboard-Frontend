@@ -11,10 +11,8 @@ const Root = () => {
   const [IssidebarOpen, setIssidebarOpen] = useState(false);
 
   const userId = useSelector(({ user }) => user.userId);
-  // console.log("Root ~ userId:", userId);
 
   const { data } = useGetUserQuery(userId);
-  // console.log("Root ~ data:", data)
 
   return (
     <div className="w-ful h-fulll flex justify-between">

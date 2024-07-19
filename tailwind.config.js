@@ -81,6 +81,7 @@ export default withMT({
       Varela: ["Varela Round", "sans-serif"],
       Inter: ["Inter", "sans-serif"],
       Rubik: ["Rubik", "sans-serif"],
+      TitilliumWeb: ["Titillium Web", "sans-serif"],
     },
 
     extend: {

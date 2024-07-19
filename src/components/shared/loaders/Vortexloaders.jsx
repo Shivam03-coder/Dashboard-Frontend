@@ -1,7 +1,5 @@
 import { Vortex } from "react-loader-spinner";
 
-import React from "react";
-
 const Vortexloaders = () => {
   return (
     <div className="h-full w-full Row-center">
