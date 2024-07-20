@@ -15,4 +15,7 @@ export default defineConfig({
     },
     chunkSizeWarningLimit: 1000, // Adjust the limit as needed
   },
+  server: {
+    historyApiFallback: true // Ensure this is set for SPA routing
+  }
 });

@@ -24,7 +24,6 @@ const Adminpage = () => {
   const { admins } = data;
 
   const Toatlpages = Math.ceil(admins.length / itemsPerpage);
-  console.log("🚀 ~ Adminpage ~ Toatlpages:", Toatlpages);
 
   const Data = usePagination(currentPage, itemsPerpage, admins);
 
