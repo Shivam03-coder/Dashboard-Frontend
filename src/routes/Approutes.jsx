@@ -1,15 +1,21 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Root from "../components/Root";
-import Productpage from "../components/pages/Productpage";
-import Customerpage from "../components/pages/Customerpage";
-import Transcationspage from "../components/pages/Transcationspage";
-import OverviewPage from "../components/pages/OverviewPage";
-import Breakdownpage from "../components/pages/Breakdownpage";
-import Adminpage from "../components/pages/Adminpage";
+import Balltriangle from "../components/shared/loaders/Balltriangle";
+
+// Use React.lazy to dynamically import each page component
+const Productpage = lazy(() => import("../components/pages/Productpage"));
+const Customerpage = lazy(() => import("../components/pages/Customerpage"));
+const Transcationspage = lazy(() =>
+  import("../components/pages/Transcationspage")
+);
+const OverviewPage = lazy(() => import("../components/pages/OverviewPage"));
+const Breakdownpage = lazy(() => import("../components/pages/Breakdownpage"));
+const Adminpage = lazy(() => import("../components/pages/Adminpage"));
 
 const Approutes = () => {
   return (
+    <Suspense fallback={<Balltriangle />}>
       <Routes>
         <Route element={<Root />}>
           <Route path="/products" element={<Productpage />} />
@@ -18,9 +24,9 @@ const Approutes = () => {
           <Route path="/overview" element={<OverviewPage />} />
           <Route path="/breakdown" element={<Breakdownpage />} />
           <Route path="/admin" element={<Adminpage />} />
-          <Route />
         </Route>
       </Routes>
+    </Suspense>
   );
 };
 
