@@ -1,16 +1,15 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { IoPersonAddOutline, IoEarthOutline } from "react-icons/io5";
-import { MdOutlineRemoveRedEye, MdOutlineCalendarToday } from "react-icons/md";
-import { TbPageBreak, TbCalendarMonth, TbReportMoney } from "react-icons/tb";
+import { IoPersonAddOutline } from "react-icons/io5";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { TbPageBreak, TbReportMoney } from "react-icons/tb";
 import { RiAdminLine } from "react-icons/ri";
-import { GrDocumentPerformance } from "react-icons/gr";
 
 const ClientFacinglinksitems = [
   {
     id: 0,
     icon: AiOutlineShoppingCart,
     label: "Products",
-    path: "/products",
+    path: "/",
   },
   {
     id: 1,

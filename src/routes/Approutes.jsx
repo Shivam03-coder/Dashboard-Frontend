@@ -2,8 +2,6 @@ import React, { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Root from "../components/Root";
 import Balltriangle from "../components/shared/loaders/Balltriangle";
-
-// Use React.lazy to dynamically import each page component
 const Productpage = lazy(() => import("../components/pages/Productpage"));
 const Customerpage = lazy(() => import("../components/pages/Customerpage"));
 const Transcationspage = lazy(() =>
@@ -18,7 +16,7 @@ const Approutes = () => {
     <Suspense fallback={<Balltriangle />}>
       <Routes>
         <Route element={<Root />}>
-          <Route path="/products" element={<Productpage />} />
+          <Route path="/" element={<Productpage />} />
           <Route path="/customer" element={<Customerpage />} />
           <Route path="/transcations" element={<Transcationspage />} />
           <Route path="/overview" element={<OverviewPage />} />
