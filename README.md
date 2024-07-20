@@ -1,8 +1,28 @@
-# React + Vite
+# Finance Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Finance Tracker is a web application built using the MERN stack (MongoDB, Express, React, Node.js) to help users manage and track their personal finances. 
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Categorize Transactions (Income, Expense)
+- View Transaction History
+- Generate Financial Reports
+- Responsive Design
+
+## Tech Stack
+
+**Frontend:**
+
+- React.js
+- Tailwind CSS
+- React Router
+- Formik for form handling
+- React-toastify for notifications
+
+**Backend:**
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+
