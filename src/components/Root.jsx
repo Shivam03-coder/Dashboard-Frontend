@@ -15,7 +15,7 @@ const Root = () => {
   const { data } = useGetUserQuery(userId);
 
   return (
-    <div className="w-ful h-fulll flex justify-between">
+    <div className="w-full h-fulll flex justify-between">
       <Sidebar
         data={data || {}}
         IsMobileView={IsMobileView}
